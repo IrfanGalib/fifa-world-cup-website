@@ -131,12 +131,30 @@ img {
 @keyframes banner-animation {
   0% {
     opacity: 0;
+    transform: translatex(-20px);
   }
   50% {
     opacity: 0.5;
+    transform: translatex(-10px);
   }
   100% {
     opacity: 1;
+    transform: translatex(0px);
+  }
+}
+
+@keyframes banner-player-animation {
+  0% {
+    opacity: 0;
+    transform: translatex(-20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translatex(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0px);
   }
 }
 /* Hero Section */
@@ -148,7 +166,7 @@ img {
   border: none;
   border-radius: 30px;
   margin: 80px auto;
-  animation: banner-animation 1s;
+  animation: banner-animation 0.7s ease-out forwards;
 }
 
 .banner-left {
@@ -158,6 +176,10 @@ img {
 }
 .banner-right {
   flex: 1;
+}
+
+.banner-right img {
+  animation: banner-player-animation 1s ease-in infinite;
 }
 
 .banner h2 {
@@ -178,6 +200,7 @@ img {
   padding: 50px 0px;
   gap: 55px;
   /* justify-content: space-between; */
+  animation: banner-animation 0.7s ease-out reverse;
 }
 
 .upcoming-matches-left {
